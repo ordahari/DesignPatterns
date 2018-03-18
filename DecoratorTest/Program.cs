@@ -30,6 +30,7 @@ namespace DecoratorTest
             Console.WriteLine("Cost:" + beverage2.Cost);
             beverage2 = new MochaDecorator(beverage2);
             Console.WriteLine("Description:" + beverage2.Description);
+
             Console.WriteLine("Cost:" + beverage2.Cost);
 
             Console.Read();
