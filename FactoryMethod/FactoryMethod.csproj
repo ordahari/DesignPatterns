@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E7F44D9-86E7-4FF6-8B3B-558011382F13}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FactoryMethod</RootNamespace>
+    <AssemblyName>FactoryMethod</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ingredients\ChicagoIngredients\ChicagoIngredientsFactory.cs" />
+    <Compile Include="Ingredients\ChicagoIngredients\FrozenClams.cs" />
+    <Compile Include="Ingredients\ChicagoIngredients\MozzarellaCheese.cs" />
+    <Compile Include="Ingredients\ChicagoIngredients\PlumTomatoSauce.cs" />
+    <Compile Include="Ingredients\ChicagoIngredients\ThickCrustDough.cs" />
+    <Compile Include="Ingredients\NYIngredients\FreshClams.cs" />
+    <Compile Include="Ingredients\NYIngredients\MarinaraSauce.cs" />
+    <Compile Include="Ingredients\NYIngredients\NYIngredientsFactory.cs" />
+    <Compile Include="Ingredients\NYIngredients\ReggianoCheese.cs" />
+    <Compile Include="Ingredients\NYIngredients\ThinCrustDough.cs" />
+    <Compile Include="Ingredients\SlicedPepperoni.cs" />
+    <Compile Include="Ingredients\Interface\ICheese.cs" />
+    <Compile Include="Ingredients\Interface\IClams.cs" />
+    <Compile Include="Ingredients\Interface\IDough.cs" />
+    <Compile Include="Ingredients\Interface\IPepperoni.cs" />
+    <Compile Include="Ingredients\Interface\IPizzaIngredientsFactory.cs" />
+    <Compile Include="Ingredients\Interface\ISauce.cs" />
+    <Compile Include="Ingredients\Interface\IVeggies.cs" />
+    <Compile Include="Ingredients\Veggies.cs" />
+    <Compile Include="PizzaStore\ChicagoPizzaStore.cs" />
+    <Compile Include="PizzaStore\IPizzaStore.cs" />
+    <Compile Include="PizzaStore\NYPizzaStore.cs" />
+    <Compile Include="Pizza\CheesePizza.cs" />
+    <Compile Include="Pizza\ClamPizza.cs" />
+    <Compile Include="Pizza\PepperoniPizza.cs" />
+    <Compile Include="Pizza\Pizza.cs" />
+    <Compile Include="Pizza\PizzaType.cs" />
+    <Compile Include="Pizza\VeggiesPizza.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
