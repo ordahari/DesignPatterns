@@ -1,10 +1,7 @@
 ﻿using Decorator.Beverages;
 using Decorator.Decorators;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DecoratorTest
 {
@@ -13,27 +10,27 @@ namespace DecoratorTest
         static void Main(string[] args)
         {
             IBeverage beverage = new DarkRoast();
-            Console.WriteLine("Description:" + beverage.Description);
-            Console.WriteLine("Cost:" + beverage.Cost);
+            PrintBeverage(beverage);
             beverage = new MochaDecorator(beverage);
-            Console.WriteLine("Description:" + beverage.Description);
-            Console.WriteLine("Cost:" + beverage.Cost);
+            PrintBeverage(beverage);
             beverage = new SoyDecorator(beverage);
-            Console.WriteLine("Description:" + beverage.Description);
-            Console.WriteLine("Cost:"+beverage.Cost);
+            PrintBeverage(beverage);
 
             IBeverage beverage2 = new Espresso();
-            Console.WriteLine("Description:" + beverage2.Description);
-            Console.WriteLine("Cost:" + beverage2.Cost);
+            PrintBeverage(beverage2);
             beverage2 = new WhipDecorator(beverage2);
-            Console.WriteLine("Description:" + beverage2.Description);
-            Console.WriteLine("Cost:" + beverage2.Cost);
+            PrintBeverage(beverage2);
             beverage2 = new MochaDecorator(beverage2);
-            Console.WriteLine("Description:" + beverage2.Description);
-            Console.WriteLine("Cost:" + beverage2.Cost);
+            PrintBeverage(beverage2);
 
             Console.Read();
 
+        }
+
+        static void PrintBeverage(IBeverage beverage)
+        {
+            Console.WriteLine("Description:" + beverage.Description);
+            Console.WriteLine("Cost:" + beverage.Cost);
         }
     }
 }

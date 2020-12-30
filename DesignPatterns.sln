@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2002
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{32E5CE8E-3827-405C-AC41-317153511050}"
 EndProject
@@ -56,6 +56,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composite", "Composite", "{BE62B8E9-4D8D-49C5-B8EE-CFF2ABDC73B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListComposite", "TodoListComposite\TodoListComposite.csproj", "{204BE0FB-1C32-41FB-AA7C-0C1AF476F420}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VisitorPattern", "VisitorPattern", "{99F6BB68-5AA6-4D8B-869E-F3B52B1326D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Visitor\Visitor.csproj", "{5999595E-193D-4C3A-9F91-016FD267B4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorTests", "VisitorTests\VisitorTests.csproj", "{D062CA06-E66A-4B47-BB09-AF0AF38E9178}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +125,14 @@ Global
 		{204BE0FB-1C32-41FB-AA7C-0C1AF476F420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{204BE0FB-1C32-41FB-AA7C-0C1AF476F420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{204BE0FB-1C32-41FB-AA7C-0C1AF476F420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5999595E-193D-4C3A-9F91-016FD267B4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5999595E-193D-4C3A-9F91-016FD267B4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5999595E-193D-4C3A-9F91-016FD267B4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5999595E-193D-4C3A-9F91-016FD267B4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D062CA06-E66A-4B47-BB09-AF0AF38E9178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D062CA06-E66A-4B47-BB09-AF0AF38E9178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D062CA06-E66A-4B47-BB09-AF0AF38E9178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D062CA06-E66A-4B47-BB09-AF0AF38E9178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +162,9 @@ Global
 		{43E6052B-5FBA-4572-964E-505E667190B4} = {AFC8788D-93A6-47B5-9BB6-7D2D249ABF01}
 		{BE62B8E9-4D8D-49C5-B8EE-CFF2ABDC73B8} = {167F2313-F59E-434B-BD07-0F78864BD253}
 		{204BE0FB-1C32-41FB-AA7C-0C1AF476F420} = {BE62B8E9-4D8D-49C5-B8EE-CFF2ABDC73B8}
+		{99F6BB68-5AA6-4D8B-869E-F3B52B1326D3} = {450F184C-6C3D-4FD8-8AA4-E9C3769A4C00}
+		{5999595E-193D-4C3A-9F91-016FD267B4B7} = {99F6BB68-5AA6-4D8B-869E-F3B52B1326D3}
+		{D062CA06-E66A-4B47-BB09-AF0AF38E9178} = {99F6BB68-5AA6-4D8B-869E-F3B52B1326D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD91642-785B-4E8A-954F-BBDF5AC9FE8E}
