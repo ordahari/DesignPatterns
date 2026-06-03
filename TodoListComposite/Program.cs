@@ -1,27 +1,23 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace TodoListComposite
 {
+    // Client: builds a tree of components and treats the whole tree
+    // uniformly by calling GetHtml() on the root.
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var p = new TodoList("Shopping", new List<ITodoList>() {
-
+            var shopping = new TodoList("Shopping", new List<ITodoList>
+            {
                 new Todo("Milk"),
-                new TodoList("Vegetables",new List<ITodoList>()
+                new TodoList("Vegetables", new List<ITodoList>
                 {
-                    new Todo("Cert")
+                    new Todo("Carrots")
                 })
             });
 
-            p.AddTodo(new Todo("Eggs"));
-            Console.WriteLine(p.GetHtml());
-            Console.Read();
+            shopping.AddTodo(new Todo("Eggs"));
+
+            Console.WriteLine(shopping.GetHtml());
         }
     }
 }

@@ -1,16 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace Facade.SubSystems;
 
-namespace Facade.SubSystems
+public class CarBuilder
 {
-    public class CarBuilder
+    public void BuildCar()
     {
-        public void BuildCar()
-        {
-            Console.WriteLine("Build A New Car");
-        }
+        Console.WriteLine("Build A New Car");
     }
 }

@@ -1,38 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Adapter.Interface;
 
-namespace Adapter
+namespace Adapter;
+
+internal class Program
 {
-    class Program
+    private static void Main()
     {
-        static void Main(string[] args)
+        var turkey = new WildTurkey();
+        var duck = new MallardDuck();
+
+        var ducks = new List<IDuck>
         {
-            var turkey = new WildTurkey();
-            var duck = new MallardDuck();
+            duck,
+            new DuckAdapter(turkey)
+        };
+        Run(ducks);
+    }
 
-            var ducks = new List<IDuck>
-            {
-                duck,
-                new DuckAdapter(turkey)
-            };
-            Run(ducks);
-
-            Console.Read();
-
-        }
-
-        private static void Run(List<IDuck> ducks)
+    private static void Run(List<IDuck> ducks)
+    {
+        foreach (var duck in ducks)
         {
-            foreach (var duck in ducks)
-            {
-                duck.Name();
-                duck.Fly();
-                duck.Quack();
-            }
+            duck.Name();
+            duck.Fly();
+            duck.Quack();
         }
     }
 }

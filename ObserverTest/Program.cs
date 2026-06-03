@@ -21,8 +21,6 @@ namespace ObserverTest
                 Thread.Sleep(1500);
 
             }
-
-            Console.Read();
         }
     }
 }

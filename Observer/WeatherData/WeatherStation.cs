@@ -7,7 +7,7 @@ namespace Observer.WeatherData
     {
 
         private List<IObserver> observers;
-        private WeatherDataResult data;
+        private WeatherDataResult? data;
         public WeatherStation()
         {
             observers = new List<IObserver>();

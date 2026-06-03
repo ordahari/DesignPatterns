@@ -22,8 +22,6 @@ namespace AbstractFactory
             nY_PizzaStore.OrderPizza(PizzaType.ClamPizza);
             nY_PizzaStore.OrderPizza(PizzaType.PapperoniPizza);
             nY_PizzaStore.OrderPizza(PizzaType.VeggiePizza);
-
-            Console.Read();
         }
     }
 }

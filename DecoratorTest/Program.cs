@@ -22,9 +22,6 @@ namespace DecoratorTest
             PrintBeverage(beverage2);
             beverage2 = new MochaDecorator(beverage2);
             PrintBeverage(beverage2);
-
-            Console.Read();
-
         }
 
         static void PrintBeverage(IBeverage beverage)

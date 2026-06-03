@@ -1,48 +1,39 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TodoListComposite
 {
+    // Composite: holds child components (leaves and/or other composites)
+    // and renders them uniformly through the shared ITodoList interface.
     public class TodoList : ITodoList
     {
-        private readonly string titel;
-        private readonly List<ITodoList> todos;
+        private readonly string _title;
+        private readonly List<ITodoList> _todos;
 
-        public TodoList(string titel, List<ITodoList> todos)
+        public TodoList(string title, List<ITodoList> todos)
         {
-            this.titel = titel;
-            this.todos = todos;
+            _title = title;
+            _todos = todos;
         }
 
-        public void AddTodo(ITodoList todo)
-        {
-            todos.Add(todo);
+        public void AddTodo(ITodoList todo) => _todos.Add(todo);
 
-        }
         public string GetHtml()
         {
+            StringBuilder html = new();
 
-            StringBuilder html = new StringBuilder();
-
-            html.Append("<h1>" + titel + "</h1>\n");
-
+            html.Append("<h1>" + _title + "</h1>\n");
             html.Append("<ul>\n");
 
-            foreach (var item in todos)
+            foreach (var item in _todos)
             {
                 html.Append("<li>");
                 html.Append(item.GetHtml());
                 html.Append("</li>\n");
-
             }
+
             html.Append("</ul>");
 
             return html.ToString();
-
-
         }
     }
 }

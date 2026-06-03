@@ -1,25 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace TodoListComposite
 {
+    // Leaf: a single to-do item with no children.
     public class Todo : ITodoList
     {
+        private readonly string _text;
+
         public Todo(string text)
         {
             _text = text;
         }
 
-        string _text;
-
-        public string GetHtml()
-        {
-
-            return _text;
-        }
-
+        public string GetHtml() => _text;
     }
 }

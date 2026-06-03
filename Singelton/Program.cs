@@ -13,8 +13,12 @@ namespace Singleton
 
             ChocolateBoler chocolateBoler = ChocolateBoler.Instance;
 
+            // Spin up a second thread that also asks for the boiler. Because the
+            // class is a Singleton, it must receive the very same instance.
             Thread thread1 = new Thread(SomeThread);
             thread1.Start();
+            thread1.Join();
+
             chocolateBoler.Fill();
             Console.WriteLine("IsEmpty:" + chocolateBoler.IsEmpty());
             Console.WriteLine("IsBoiled:" + chocolateBoler.IsBoiled());
@@ -24,19 +28,13 @@ namespace Singleton
             chocolateBoler.Drain();
             Console.WriteLine("IsEmpty:" + chocolateBoler.IsEmpty());
             Console.WriteLine("IsBoiled:" + chocolateBoler.IsBoiled());
-
-            Console.Read();
         }
 
-        public static void SomeThread(object obj)
+        public static void SomeThread(object? obj)
         {
             var _chocolateBoler = ChocolateBoler.Instance;
-            while (_chocolateBoler.IsBoiled())
-            {
-
-
-            }
-            Console.WriteLine("END SomeThread");
+            bool sameInstance = ReferenceEquals(_chocolateBoler, ChocolateBoler.Instance);
+            Console.WriteLine("SomeThread got the same instance: " + sameInstance);
         }
     }
 }

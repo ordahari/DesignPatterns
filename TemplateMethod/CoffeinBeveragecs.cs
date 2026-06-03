@@ -1,31 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace TemplateMethod
 {
+    // AbstractClass: defines the skeleton of the "prepare a caffeine beverage"
+    // algorithm in the template method PrepareRecipe(). Some steps are fixed,
+    // some are deferred to subclasses, and one is an optional hook.
     public abstract class CoffeinBeveragecs
     {
-
-        public void PrepareRecipt()
+        // The template method: defines the algorithm skeleton and is not
+        // overridden by subclasses.
+        public void PrepareRecipe()
         {
             BoilWater();
             Brew();
             PourInCup();
-            AddCondiments();
+            if (CustomerWantsCondiments())
+            {
+                AddCondiments();
+            }
         }
 
-        protected abstract void AddCondiments();
-        private void PourInCup()
-        {
-
-        }
+        // Primitive operations: subclasses MUST implement these steps.
         protected abstract void Brew();
-        private void BoilWater()
-        {
-            Console.WriteLine("Boil the water..");
-        }
+        protected abstract void AddCondiments();
+
+        // Fixed steps shared by all beverages.
+        private void BoilWater() => Console.WriteLine("Boil the water..");
+        private void PourInCup() => Console.WriteLine("Pour into cup..");
+
+        // Hook: a step with a default implementation that subclasses may
+        // override to influence the algorithm.
+        protected virtual bool CustomerWantsCondiments() => true;
     }
 }
