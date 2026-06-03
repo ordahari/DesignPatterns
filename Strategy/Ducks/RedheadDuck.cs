@@ -1,9 +1,9 @@
-﻿using Strategy.Stategy.Behaviors;
+using Strategy.Stategy.Behaviors;
 using Strategy.Stategy.Behaviors.FlyBehaviors;
 
 namespace Strategy.Ducks
 {
-    public class RedheadDuck :BaseDuck
+    public class RedheadDuck : BaseDuck
     {
         public RedheadDuck() : base(new RegularQuacking(), new FlyWithWings())
         {

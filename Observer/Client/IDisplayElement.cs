@@ -1,4 +1,4 @@
-﻿namespace Observer.Client
+namespace Observer.Client
 {
     public interface IDisplayElement
     {

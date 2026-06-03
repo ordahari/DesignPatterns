@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +8,10 @@ using FactoryMethod.Pizza;
 
 namespace FactoryMethod.PizzaStore
 {
-   public class ChicagoPizzaStore : IPizzaStore
+    public class ChicagoPizzaStore : IPizzaStore
     {
-        public Pizza.Pizza CreatePizza(PizzaType pizzaType) {
+        public Pizza.Pizza CreatePizza(PizzaType pizzaType)
+        {
 
             switch (pizzaType)
             {

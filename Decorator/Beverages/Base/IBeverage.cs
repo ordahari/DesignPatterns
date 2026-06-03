@@ -1,4 +1,4 @@
-﻿namespace Decorator.Beverages
+namespace Decorator.Beverages
 {
     public interface IBeverage
     {

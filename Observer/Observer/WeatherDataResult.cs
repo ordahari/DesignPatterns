@@ -1,4 +1,4 @@
-﻿namespace Observer.Observer
+namespace Observer.Observer
 {
     public class WeatherDataResult
     {

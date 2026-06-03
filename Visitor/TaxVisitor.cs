@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Visitor.Items;
 
 namespace Visitor
@@ -17,7 +17,7 @@ namespace Visitor
 
         public double CalcPriceWithTax(NecessityItem necessityItem)
         {
-           return necessityItem.Price;
+            return necessityItem.Price;
         }
 
     }

@@ -1,0 +1,16 @@
+<Project>
+
+  <!-- Repo-wide build defaults for the .NET 10 / C# 14 modernization baseline.
+       TreatWarningsAsErrors stays false for now; flip to true once the repo is
+       warning-clean (see the modernization follow-ups). -->
+  <PropertyGroup>
+    <LangVersion>14</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>

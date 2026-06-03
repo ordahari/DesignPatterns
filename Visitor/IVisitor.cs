@@ -1,4 +1,4 @@
-﻿using Visitor.Items;
+using Visitor.Items;
 
 namespace Visitor
 {

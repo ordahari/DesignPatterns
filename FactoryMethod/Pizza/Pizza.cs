@@ -1,9 +1,9 @@
-﻿using FactoryMethod.Ingredients.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FactoryMethod.Ingredients.Interface;
 
 namespace FactoryMethod.Pizza
 {
@@ -19,9 +19,9 @@ namespace FactoryMethod.Pizza
         protected IClams clams;
         protected IPepperoni pepperoni;
         protected IVeggies veggies;
-            
 
-        public Pizza(string name ,IPizzaIngredientsFactory pizzaIngredientsFactory)
+
+        public Pizza(string name, IPizzaIngredientsFactory pizzaIngredientsFactory)
         {
             _name = name;
             _pizzaIngredientsFactory = pizzaIngredientsFactory;

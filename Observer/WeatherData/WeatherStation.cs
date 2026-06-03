@@ -1,5 +1,5 @@
-﻿using Observer.Observer;
 using System.Collections.Generic;
+using Observer.Observer;
 
 namespace Observer.WeatherData
 {

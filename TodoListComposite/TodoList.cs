@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace TodoListComposite
         private readonly string titel;
         private readonly List<ITodoList> todos;
 
-        public TodoList(string titel ,List<ITodoList> todos)
+        public TodoList(string titel, List<ITodoList> todos)
         {
             this.titel = titel;
             this.todos = todos;
@@ -22,11 +22,12 @@ namespace TodoListComposite
             todos.Add(todo);
 
         }
-        public string GetHtml() {
+        public string GetHtml()
+        {
 
             StringBuilder html = new StringBuilder();
 
-            html.Append("<h1>"+titel+"</h1>\n");
+            html.Append("<h1>" + titel + "</h1>\n");
 
             html.Append("<ul>\n");
 
@@ -40,7 +41,7 @@ namespace TodoListComposite
             html.Append("</ul>");
 
             return html.ToString();
-            
+
 
         }
     }

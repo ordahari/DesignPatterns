@@ -1,10 +1,10 @@
-﻿using Command.Commands;
-using Command.Devices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Command.Commands;
+using Command.Devices;
 
 namespace Command
 {
