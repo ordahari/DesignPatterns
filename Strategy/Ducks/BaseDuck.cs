@@ -24,7 +24,18 @@ namespace Strategy.Ducks
             return _quackBehavior.Quack();
         }
 
-        public string swim()
+        // Swap the algorithm at runtime — the heart of the Strategy pattern.
+        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+        {
+            _flyBehavior = flyBehavior;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        {
+            _quackBehavior = quackBehavior;
+        }
+
+        public string Swim()
         {
             return "All ducks float, even decoys!";
         }

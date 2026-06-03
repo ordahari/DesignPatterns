@@ -8,7 +8,7 @@ namespace Singleton
 {
     public sealed class ChocolateBoler
     {
-        private static volatile ChocolateBoler instance;
+        private static volatile ChocolateBoler? instance;
         private static object syncRoot = new Object();
         private bool empty;
         private bool boiled;

@@ -24,7 +24,7 @@ namespace AbstractFactory.Factory
                 case PizzaType.VeggiePizza:
                     return new ChicagoVeggiePizza();
                 default:
-                    return null;
+                    throw new ArgumentOutOfRangeException(nameof(pizzaType), pizzaType, "Unsupported pizza type.");
             }
 
         }

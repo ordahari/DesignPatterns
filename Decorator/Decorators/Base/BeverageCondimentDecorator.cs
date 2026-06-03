@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Decorator.Beverages;
 
 namespace Decorator.Decorators
 {
-    public class BeverageCondimentDecorator : IBeverage
+    public abstract class BeverageCondimentDecorator : IBeverage
     {
-        protected IBeverage _beverage;
-        public BeverageCondimentDecorator(IBeverage beverage)
+        protected readonly IBeverage _beverage;
+        protected BeverageCondimentDecorator(IBeverage beverage)
         {
             _beverage = beverage;
         }

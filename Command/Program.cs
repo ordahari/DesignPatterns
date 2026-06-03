@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Command.Commands;
 using Command.Devices;
 
@@ -27,7 +22,6 @@ namespace Command
             r.OffButtonWasPushed(1);
             r.OnButtonWasPushed(2);
             r.OffButtonWasPushed(2);
-            Console.Read();
         }
     }
 }

@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FactoryMethod.Pizza;
 using FactoryMethod.PizzaStore;
 
 namespace FactoryMethod
@@ -11,27 +7,24 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            var chicagoPizzaStore = new ChicagoPizzaStore();
-            Run(chicagoPizzaStore.CreatePizza(Pizza.PizzaType.CheesePizza));
-            Run(chicagoPizzaStore.CreatePizza(Pizza.PizzaType.ClamPizza));
-            Run(chicagoPizzaStore.CreatePizza(Pizza.PizzaType.PapperoniPizza));
-            Run(chicagoPizzaStore.CreatePizza(Pizza.PizzaType.VeggiePizza));
+            PizzaStore.PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+            Order(chicagoPizzaStore, PizzaType.CheesePizza);
+            Order(chicagoPizzaStore, PizzaType.ClamPizza);
+            Order(chicagoPizzaStore, PizzaType.PapperoniPizza);
+            Order(chicagoPizzaStore, PizzaType.VeggiePizza);
 
-            var nYPizzaStore = new NYPizzaStore();
-            Run(nYPizzaStore.CreatePizza(Pizza.PizzaType.CheesePizza));
-            Run(nYPizzaStore.CreatePizza(Pizza.PizzaType.ClamPizza));
-            Run(nYPizzaStore.CreatePizza(Pizza.PizzaType.PapperoniPizza));
-            Run(nYPizzaStore.CreatePizza(Pizza.PizzaType.VeggiePizza));
-
-            Console.Read();
+            PizzaStore.PizzaStore nYPizzaStore = new NYPizzaStore();
+            Order(nYPizzaStore, PizzaType.CheesePizza);
+            Order(nYPizzaStore, PizzaType.ClamPizza);
+            Order(nYPizzaStore, PizzaType.PapperoniPizza);
+            Order(nYPizzaStore, PizzaType.VeggiePizza);
         }
 
-        public static void Run(Pizza.Pizza pizza)
+        // Drives the Factory Method: OrderPizza runs the shared steps while the
+        // store's overridden CreatePizza decides the concrete product.
+        public static void Order(PizzaStore.PizzaStore store, PizzaType pizzaType)
         {
-            pizza.Prepare();
-            pizza.Bake();
-            pizza.Cut();
-            pizza.Box();
+            store.OrderPizza(pizzaType);
             Console.WriteLine("--------------Reedy----------------");
         }
     }

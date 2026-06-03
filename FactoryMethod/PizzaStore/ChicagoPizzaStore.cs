@@ -1,37 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FactoryMethod.Ingredients.ChicagoIngredients;
 using FactoryMethod.Pizza;
 
 namespace FactoryMethod.PizzaStore
 {
-    public class ChicagoPizzaStore : IPizzaStore
+    // ConcreteCreator: overrides the factory method to build Chicago-style pizzas
+    // backed by the Chicago ingredient factory.
+    public class ChicagoPizzaStore : PizzaStore
     {
-        public Pizza.Pizza CreatePizza(PizzaType pizzaType)
+        public override Pizza.Pizza CreatePizza(PizzaType pizzaType)
         {
-
-            switch (pizzaType)
+            return pizzaType switch
             {
-                case PizzaType.CheesePizza:
-                    return new CheesePizza("Chicago CheesePizza", new ChicagoIngredientsFactory());
-
-                case PizzaType.ClamPizza:
-                    return new ClamPizza("Chicago ClamPizza", new ChicagoIngredientsFactory());
-
-                case PizzaType.PapperoniPizza:
-                    return new PepperoniPizza("Chicago Pepperoni", new ChicagoIngredientsFactory());
-
-                case PizzaType.VeggiePizza:
-                    return new VeggiesPizza("Chicago Veggies", new ChicagoIngredientsFactory());
-
-                default:
-                    return null;
-                    break;
-            }
+                PizzaType.CheesePizza => new CheesePizza("Chicago CheesePizza", new ChicagoIngredientsFactory()),
+                PizzaType.ClamPizza => new ClamPizza("Chicago ClamPizza", new ChicagoIngredientsFactory()),
+                PizzaType.PapperoniPizza => new PepperoniPizza("Chicago Pepperoni", new ChicagoIngredientsFactory()),
+                PizzaType.VeggiePizza => new VeggiesPizza("Chicago Veggies", new ChicagoIngredientsFactory()),
+                _ => throw new ArgumentOutOfRangeException(nameof(pizzaType), pizzaType, "Unknown pizza type."),
+            };
         }
-
     }
 }

@@ -1,24 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FactoryMethod.Ingredients.Interface;
 
 namespace FactoryMethod.Pizza
 {
+    // Product base class: the abstract Pizza all concrete products derive from.
     public abstract class Pizza
     {
         protected string _name;
 
         protected IPizzaIngredientsFactory _pizzaIngredientsFactory;
 
-        protected IDough dough;
-        protected ISauce sauce;
-        protected ICheese cheese;
-        protected IClams clams;
-        protected IPepperoni pepperoni;
-        protected IVeggies veggies;
+        // Ingredients are populated during Prepare() by the ingredient factory,
+        // and each concrete pizza only uses the subset it needs, so they are nullable.
+        protected IDough? dough;
+        protected ISauce? sauce;
+        protected ICheese? cheese;
+        protected IClams? clams;
+        protected IPepperoni? pepperoni;
+        protected IVeggies? veggies;
 
 
         public Pizza(string name, IPizzaIngredientsFactory pizzaIngredientsFactory)

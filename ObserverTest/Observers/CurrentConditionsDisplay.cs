@@ -7,7 +7,7 @@ namespace ObserverTest.Observers
 {
     public class CurrentConditionsDisplay : IObserver, IDisplayElement
     {
-        WeatherDataResult data;
+        WeatherDataResult? data;
         public void Display()
         {
             if (data != null)
