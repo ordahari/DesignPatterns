@@ -1,7 +1,7 @@
-﻿
+
+using System;
 using Observer.Client;
 using Observer.Observer;
-using System;
 
 namespace ObserverTest.Observers
 {
@@ -15,7 +15,7 @@ namespace ObserverTest.Observers
                 Console.WriteLine($"Current Conditions Display :\n Temperature :{data.Temperature} \n Humidity :{data.Humidity} \n Pressure :{data.Pressure}");
                 return;
             }
-            Console.WriteLine( "No Data !");
+            Console.WriteLine("No Data !");
         }
         public void Update(WeatherDataResult data)
         {

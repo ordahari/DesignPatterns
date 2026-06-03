@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using FactoryMethod.Ingredients.Interface;
 
 namespace FactoryMethod.Pizza
 {
-   public class PepperoniPizza :Pizza
+    public class PepperoniPizza : Pizza
     {
         public PepperoniPizza(string name, IPizzaIngredientsFactory pizzaIngredientsFactory) : base(name, pizzaIngredientsFactory)
         {

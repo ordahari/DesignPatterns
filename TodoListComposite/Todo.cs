@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,8 @@ namespace TodoListComposite
 
         string _text;
 
-        public string GetHtml() {
+        public string GetHtml()
+        {
 
             return _text;
         }

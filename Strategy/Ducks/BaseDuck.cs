@@ -1,4 +1,4 @@
-﻿using Strategy.Stategy.Behaviors;
+using Strategy.Stategy.Behaviors;
 
 namespace Strategy.Ducks
 {

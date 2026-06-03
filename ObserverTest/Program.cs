@@ -1,7 +1,7 @@
-﻿using Observer.WeatherData;
 using System;
-using ObserverTest.Observers;
 using System.Threading;
+using Observer.WeatherData;
+using ObserverTest.Observers;
 
 namespace ObserverTest
 {
@@ -19,7 +19,7 @@ namespace ObserverTest
                 Console.WriteLine($"Count :{i}");
                 weather.SetMeasurements(r.Next(-55, 55), r.Next(10, 90), r.Next(10, 50));
                 Thread.Sleep(1500);
-                
+
             }
 
             Console.Read();

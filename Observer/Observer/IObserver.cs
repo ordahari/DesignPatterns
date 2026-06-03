@@ -1,6 +1,6 @@
-﻿namespace Observer.Observer
+namespace Observer.Observer
 {
-    public  interface IObserver
+    public interface IObserver
     {
         void Update(WeatherDataResult data);
     }

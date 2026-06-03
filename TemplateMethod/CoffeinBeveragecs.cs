@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +18,13 @@ namespace TemplateMethod
         }
 
         protected abstract void AddCondiments();
-        private void PourInCup() {
+        private void PourInCup()
+        {
 
         }
         protected abstract void Brew();
-        private void BoilWater() {
+        private void BoilWater()
+        {
             Console.WriteLine("Boil the water..");
         }
     }

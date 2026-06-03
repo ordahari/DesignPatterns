@@ -1,10 +1,10 @@
-﻿using Command.Devices;
-using Command.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Command.Devices;
+using Command.Interface;
 
 namespace Command.Commands
 {
@@ -16,7 +16,8 @@ namespace Command.Commands
             _stereo = stereo;
         }
 
-        public void Execute() {
+        public void Execute()
+        {
             _stereo.On();
         }
     }

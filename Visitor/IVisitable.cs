@@ -1,4 +1,4 @@
-﻿namespace Visitor
+namespace Visitor
 {
     public interface IVisitable
     {

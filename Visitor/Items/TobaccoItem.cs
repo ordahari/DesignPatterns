@@ -1,4 +1,4 @@
-﻿namespace Visitor.Items
+namespace Visitor.Items
 {
     public class TobaccoItem : IVisitable
     {
